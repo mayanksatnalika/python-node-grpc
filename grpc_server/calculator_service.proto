@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+service RouteGuide { 
+    rpc GetGreeting(emptyMessageReuqest) returns (greetingResponse) {}
+    rpc GetAnswer(argumentsRequest) returns (answerResponse) {}
+    }
+  
+message greetingResponse {
+    string greeting_message = 1;
+
+}
+
+
+message emptyMessageReuqest {}
+
+
+message argumentsRequest {
+    float op1 = 1;
+    float op2 = 2;
+    string operand = 3;
+}
+
+
+message answerResponse {
+    float calculator_answer = 1;
+}
